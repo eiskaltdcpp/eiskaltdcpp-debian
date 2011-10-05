@@ -1,43 +1,40 @@
-eiskaltdcpp (2.2.4-1) unstable; urgency=low
+eiskaltdcpp (2.2.4-0ppa1~oneiric1) oneiric; urgency=low
 
   * Update to stable release 2.2.4.
-  * Updated file debian/copyright:
-    - new author was added in upstream
-    - new files were added in upstream
-  * Updated file debian/rules:
-    - enabled DHT support in configurating options
 
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 02 Oct 2011 19:12:57 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 02 Oct 2011 18:44:07 +0300
 
-eiskaltdcpp (2.2.3-1) unstable; urgency=low
+eiskaltdcpp (2.2.3-0ppa1~oneiric1) oneiric; urgency=low
 
   * Update to stable release 2.2.3.
-  * Added additional fields Vcs-Git and Vcs-Browser in debian/control.
-  * Such bugs were fixed in upstream:
-    - added German translation (Closes: #627930)
-    - fixed bug with connecting to ADC hubs on armel architecture
-      (Closes: #630841)
-    - updated local file cmake/FindGTK2.cmake:
-      it works with Debian multiarch now (LP: #791231)
-  * Fixed new lintian warning 'debian-rules-missing-recommended-target'.
-  * Updated file debian/copyright: new files were added in upstream.
 
- -- Boris Pek <tehnick-8@mail.ru>  Sat, 25 Jun 2011 01:11:16 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Fri, 24 Jun 2011 23:42:04 +0300
 
-eiskaltdcpp (2.2.2-1) unstable; urgency=low
+eiskaltdcpp (2.2.2-0ppa1~natty1) natty; urgency=low
 
   * Update to stable release 2.2.2.
-  * Added dependence from libminiupnpc library (linked dynamically)
-    now it is used instead local copy of miniupnpc (was linked statically).
-  * Added dependence from libidn11 library (new program requirement).
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 25 Apr 2011 00:44:55 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 24 Apr 2011 22:18:49 +0300
 
-eiskaltdcpp (2.2.1-1) unstable; urgency=low
+eiskaltdcpp (2.2.1-0ppa1~natty1) natty; urgency=low
 
   * Update to stable release 2.2.1.
 
- -- Boris Pek <tehnick-8@mail.ru>  Tue, 08 Mar 2011 21:00:59 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 08 Mar 2011 20:31:35 +0200
+
+eiskaltdcpp (2.2.0-3ppa2~natty1) natty; urgency=low
+
+  * Fix in debian/eiskaltdcpp-scripts.files
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 13 Feb 2011 12:54:30 +0200
+
+eiskaltdcpp (2.2.0-3ppa1~natty1) natty; urgency=low
+
+  * Package on Launchpad was sync with package in Debian.
+  * Changelog was cleaned.
+  * UPnP was switched on in packages on Launchpad.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 13 Feb 2011 12:23:45 +0200
 
 eiskaltdcpp (2.2.0-3) unstable; urgency=low
 
