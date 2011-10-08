@@ -10,6 +10,10 @@ endif
 
 BUILDDIR = builddir
 
+PACKAGE = eiskaltdcpp
+
+CUR_VER = $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
+
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DCMAKE_INSTALL_PREFIX=/usr \
             -DUSE_MINIUPNP=ON -DLOCAL_MINIUPNP=OFF \
@@ -58,6 +62,9 @@ install: build
 	dh_prep
 	dh_installdirs
 	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
+get-orig-source:
+	wget -4 "http://eiskaltdc.googlecode.com/files/eiskaltdcpp-$(CUR_VER).tar.bz2"
+	mv -f "$(PACKAGE)-$(CUR_VER).tar.bz2" "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
 binary-indep: build install
 	dh_testdir -i
 	dh_testroot -i
@@ -84,6 +91,7 @@ binary-arch: build install
 	dh_strip -peiskaltdcpp-qt --dbg-package=eiskaltdcpp-qt-dbg
 	dh_strip -peiskaltdcpp-gtk --dbg-package=eiskaltdcpp-gtk-dbg
 	dh_strip -peiskaltdcpp-daemon --dbg-package=eiskaltdcpp-daemon-dbg
+	dh_lintian
 	dh_compress -a
 	dh_fixperms -a
 	dh_makeshlibs -plibeiskaltdcpp2.2
