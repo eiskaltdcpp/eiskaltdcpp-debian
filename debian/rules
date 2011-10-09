@@ -91,7 +91,7 @@ binary-arch: build install
 	dh_strip -peiskaltdcpp-qt --dbg-package=eiskaltdcpp-qt-dbg
 	dh_strip -peiskaltdcpp-gtk --dbg-package=eiskaltdcpp-gtk-dbg
 	dh_strip -peiskaltdcpp-daemon --dbg-package=eiskaltdcpp-daemon-dbg
-	dh_lintian
+	dh_lintian -a
 	dh_compress -a
 	dh_fixperms -a
 	dh_makeshlibs -plibeiskaltdcpp2.2

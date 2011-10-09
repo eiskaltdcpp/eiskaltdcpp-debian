@@ -29,7 +29,7 @@ License: GPL-3+ with OpenSSL exception
  On Debian systems, the complete text of the GNU General Public License
  can be found in `/usr/share/common-licenses/GPL-3'.
  .
- In addition, as a special exception, authors of this program gives permission
+ In addition, as a special exception, authors of this program give permission
  to link the code of its release with the OpenSSL project's "OpenSSL" library
  (or with modified versions of it that use the same license as the "OpenSSL"
  library), and distribute the linked executables. You must obey the GNU General
