@@ -1,6 +1,6 @@
 eiskaltdcpp (2.2.4-2) unstable; urgency=low
 
-  * Additional fields Vcs-Svn and Vcs-Browser in debian/control were updated.
+  * Additional fields Vcs-Git and Vcs-Browser in debian/control were updated.
   * Additional section get-orig-source was added in debian/rules.
   * File debian/copyright was rewritten in according to DEP-5.
   * File debian/libeiskaltdcpp2.2.lintian-overrides was added:
