@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.4-2ppa1~precise1) precise; urgency=low
+
+  * Package on Launchpad was sync with package in Debian.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 05 Dec 2011 23:58:28 +0200
+
 eiskaltdcpp (2.2.4-0ppa1~oneiric1) oneiric; urgency=low
 
   * Update to stable release 2.2.4.
