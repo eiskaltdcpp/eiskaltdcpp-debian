@@ -1,3 +1,15 @@
+eiskaltdcpp (2.2.5-1) unstable; urgency=low
+
+  * Update to stable release 2.2.5.
+  * debian/copyright was updated:
+    - source tree was reorganized in upstream
+    - new files were added into source tree
+  * debian/eiskaltdcpp-sounds.docs was updated.
+  * debian/rules was updated:
+    configurating options USE_QT_QML and JSONRPC_DAEMON were enabled.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 26 Dec 2011 23:22:08 +0200
+
 eiskaltdcpp (2.2.4-2) unstable; urgency=low
 
   * Additional fields Vcs-Git and Vcs-Browser in debian/control were updated.
