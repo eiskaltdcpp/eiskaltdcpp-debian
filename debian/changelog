@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.5-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 2.2.5.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 26 Dec 2011 02:12:50 +0200
+
 eiskaltdcpp (2.2.4-2ppa1~precise1) precise; urgency=low
 
   * Package on Launchpad was sync with package in Debian.
