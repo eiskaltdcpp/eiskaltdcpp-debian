@@ -1,3 +1,15 @@
+eiskaltdcpp (2.2.5-0ppa2~precise1) precise; urgency=low
+
+  * Added packages:
+      eiskaltdcpp-qt-mini and eiskaltdcpp-gtk3,
+      eiskaltdcpp-qt-mini-dbg and eiskaltdcpp-gtk3-dbg.
+  * Dependencies of meta-package eiskaltdcpp were updated:
+    now user has choise to install one of packages with GUI,
+    few ones or even all of them.
+  * Updated long description for package eiskaltdcpp-daemon.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 10 Jan 2012 01:49:38 +0200
+
 eiskaltdcpp (2.2.5-0ppa1~precise1) precise; urgency=low
 
   * Update to stable release 2.2.5.
