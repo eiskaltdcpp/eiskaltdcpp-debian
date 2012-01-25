@@ -56,6 +56,7 @@ do-clean:
 	dh_testroot
 	[ ! -f Makefile ] || ( cd $(BUILDDIR) && $(MAKE) clean )
 	test ! -d $(BUILDDIR) || rm -r $(BUILDDIR)
+	rm -f configure-stamp build-stamp
 	dh_clean
 install: build
 	dh_testdir
