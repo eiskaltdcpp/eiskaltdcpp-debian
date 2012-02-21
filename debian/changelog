@@ -1,3 +1,13 @@
+eiskaltdcpp (2.2.6-0ppa1~precise1) precise; urgency=low
+
+  * Update to stable release 2.2.6.
+  * New package libeiskaltdcpp2.2-dev was added.
+  * d/copyright was updated:
+    - URI in Format field was updated.
+    - Copyright information was updated.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 21 Feb 2012 01:52:42 +0200
+
 eiskaltdcpp (2.2.5-0ppa3~precise1) precise; urgency=low
 
   * Added package eiskaltdcpp-cli.

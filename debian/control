@@ -121,7 +121,7 @@ Description: DC++ kernel from EiskaltDC++ (debug symbols)
  common DC hub software.
 
 Package: libeiskaltdcpp2.2-dev
-Section: devel
+Section: libdevel
 Architecture: any
 Depends: ${misc:Depends},
  libeiskaltdcpp2.2 (= ${binary:Version})
