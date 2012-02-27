@@ -12,7 +12,7 @@ BUILDDIR = builddir
 
 PACKAGE = eiskaltdcpp
 
-CUR_VER = $(shell dpkg-parsechangelog | sed -ne 's/^Version: \(\([0-9]\+\):\)\?\(.*\)-.*/\3/p')
+CUR_VER = $(shell uscan --dehs | sed -n 's/.*<upstream-version>\(.*\)<\/upstream-version>.*/\1/p')
 
 CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DCMAKE_INSTALL_PREFIX=/usr \
@@ -96,7 +96,7 @@ binary-arch: build install
 	dh_lintian -a
 	dh_compress -a
 	dh_fixperms -a
-	dh_makeshlibs -plibeiskaltdcpp2.2
+	dh_makeshlibs -V -plibeiskaltdcpp2.2
 	dh_installdeb -a
 	dh_shlibdeps -a -ldebian/libeiskaltdcpp2.2/usr/lib
 	dh_installdebconf -a

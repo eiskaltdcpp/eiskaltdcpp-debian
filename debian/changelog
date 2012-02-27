@@ -1,3 +1,27 @@
+eiskaltdcpp (2.2.6-1) unstable; urgency=low
+
+  * Update to stable release 2.2.6.
+  * Bumped Standards-Version to 3.9.3.
+  * debian/control was updated:
+    - added string `DM-Upload-Allowed: yes'
+    - added dependence from libattr1 library
+    - updated long descriptions in all packages
+    - updated dependencies of meta-package eiskaltdcpp:
+      now user has choice to install one of packages with GUI or few ones
+      (not only all of them as was earlier)
+    - meta-package eiskaltdcpp was moved to new archive section metapackages
+    - removed old libraries from libeiskaltdcpp2.2 Conflicts and Replaces
+      (these libraries never were in Debian or Ubuntu releases)
+  * debian/copyright was updated:
+    - URL in Format field was updated
+    - copyright information was updated (copyrighters and years)
+  * debian/rules was updated:
+    - configure-stamp and build-stamp files are removed during clean now
+    - uscan is used for checking current upstream version
+      (dpkg-parsechangelog was used earlier)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 27 Feb 2012 03:14:03 +0200
+
 eiskaltdcpp (2.2.5-1) unstable; urgency=low
 
   * Update to stable release 2.2.5.
