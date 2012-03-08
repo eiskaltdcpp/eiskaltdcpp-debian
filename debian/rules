@@ -65,8 +65,8 @@ install: build
 	dh_installdirs
 	cd $(BUILDDIR) && $(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
 get-orig-source:
-	wget -4 "http://eiskaltdc.googlecode.com/files/eiskaltdcpp-$(CUR_VER).tar.bz2"
-	mv -f "$(PACKAGE)-$(CUR_VER).tar.bz2" "$(PACKAGE)_$(CUR_VER).orig.tar.bz2"
+	wget -4 "http://eiskaltdc.googlecode.com/files/eiskaltdcpp-$(CUR_VER).tar.xz"
+	mv -f "$(PACKAGE)-$(CUR_VER).tar.xz" "$(PACKAGE)_$(CUR_VER).orig.tar.xz"
 binary-indep: build install
 	dh_testdir -i
 	dh_testroot -i
