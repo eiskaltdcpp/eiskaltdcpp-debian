@@ -1,3 +1,10 @@
+eiskaltdcpp (2.2.6-2) unstable; urgency=low
+
+  * debian/rules was updated: now dh is used instead of direct dh_* commands.
+    (fixes FTBFS with new build-arch handling) (Closes: #665865)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 27 Mar 2012 02:33:00 +0300
+
 eiskaltdcpp (2.2.6-1) unstable; urgency=low
 
   * Update to stable release 2.2.6.
