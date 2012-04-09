@@ -1,3 +1,12 @@
+eiskaltdcpp (2.2.6-0ppa3~precise1) precise; urgency=low
+
+  * Few patches were backported from version 2.2.7 which is not yet released:
+    - debian/patches/fixed-blur-icon-in-the-D-Bus-notifications-in-Ubuntu.patch
+    - debian/patches/correctly-save-header-state-for-tree-views.patch
+    - debian/patches/fixed-crash-on-exit.patch (LP: #944675)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 10 Apr 2012 00:49:02 +0300
+
 eiskaltdcpp (2.2.6-0ppa2~precise1) precise; urgency=low
 
   * debian/rules was updated: now dh is used instead of direct dh_* commands.
