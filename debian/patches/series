@@ -1,0 +1,3 @@
+fixed-crash-on-exit.patch
+correctly-save-header-state-for-tree-views.patch
+fixed-blur-icon-in-the-D-Bus-notifications-in-Ubuntu.patch
