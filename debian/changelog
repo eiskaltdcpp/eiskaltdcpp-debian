@@ -1,6 +1,8 @@
 eiskaltdcpp (2.2.6-4) unstable; urgency=low
 
-  * Added patch: debian/patches/fix-for-gcc-4.7.patch
+  * Added patches:
+    - debian/patches/fix-for-gcc-4.7.patch
+    - debian/patches/fix-crash-at-launch-time.patch
 
  -- Boris Pek <tehnick-8@mail.ru>  Thu, 10 May 2012 19:22:30 +0300
 
