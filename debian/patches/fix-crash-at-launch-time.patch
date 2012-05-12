@@ -4,17 +4,6 @@ Description: Fix crash at launch time
 Author: Pino Toscano <pino@debian.org>
 Last-Update: 2012-05-12
 
---- a/eiskaltdcpp-qt/src/PublicHubs.cpp
-+++ b/eiskaltdcpp-qt/src/PublicHubs.cpp
-@@ -151,7 +151,7 @@ void PublicHubs::slotContextMenu(){
-         return;
- 
-     if (proxy)
--        std::transform(indexes.begin(), indexes.end(), indexes.begin(), [&proxy](QModelIndex i) { return proxy->mapToSource(i); });
-+        std::transform(indexes.begin(), indexes.end(), indexes.begin(), [&](QModelIndex i) { return proxy->mapToSource(i); });
- 
-     WulforUtil *WU = WulforUtil::getInstance();
- 
 --- a/eiskaltdcpp-qt/src/EiskaltApp.h
 +++ b/eiskaltdcpp-qt/src/EiskaltApp.h
 @@ -87,7 +87,7 @@ private:
