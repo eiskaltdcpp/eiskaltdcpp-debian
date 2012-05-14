@@ -8,7 +8,9 @@ ifeq (,$(NUMJOBS))
 	NUMJOBS = 1
 endif
 
-DEB_BUILDDIR = builddir
+BUILDDIR1 = builddir1
+BUILDDIR2 = builddir2
+
 DEB_DH_INSTALL_SOURCEDIR = $(CURDIR)/debian/tmp
 
 PACKAGE = eiskaltdcpp
@@ -23,15 +25,22 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
             -DWITH_SOUNDS=ON \
             -DUSE_QT=ON \
             -DUSE_ASPELL=ON -DFREE_SPACE_BAR_C=ON \
-            -DUSE_JS=ON -DUSE_QT_QML=ON \
-            -DUSE_QT_SQLITE=ON \
-            -DUSE_GTK=ON \
             -DCHECK_GTK_DEPRECATED=ON \
             -DUSE_LIBGNOME2=OFF -DUSE_LIBNOTIFY=ON \
             -DCREATE_MO=ON -DUPDATE_PO=OFF \
             -DNO_UI_DAEMON=ON \
             -DXMLRPC_DAEMON=OFF -DJSONRPC_DAEMON=ON \
+            -DUSE_CLI_JSONRPC=ON \
+            -DWITH_DEV_FILES=ON \
             ..
+
+OPTSSTEP1 = -DUSE_QT_SQLITE=ON \
+            -DUSE_JS=ON -DUSE_QT_QML=ON \
+            -DUSE_GTK=ON -DUSE_GTK3=OFF
+
+OPTSSTEP2 = -DUSE_QT_SQLITE=OFF \
+            -DUSE_JS=OFF -DUSE_QT_QML=OFF \
+            -DUSE_GTK=OFF -DUSE_GTK3=ON
 
 # This option is for daily builds of the EiskaltDC++ packages on Launchpad
 # See https://launchpad.net/~tehnick/+archive/tehnick for more information
@@ -43,19 +52,39 @@ CMAKEOPTS = -DCMAKE_BUILD_TYPE=RelWithDebInfo \
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	mkdir -p $(DEB_BUILDDIR) && cd $(DEB_BUILDDIR) && cmake $(CMAKEOPTS)
+	mkdir -p $(BUILDDIR1) && cd $(BUILDDIR1) && cmake $(CMAKEOPTS) $(OPTSSTEP1)
 
 override_dh_auto_build:
-	cd $(DEB_BUILDDIR) && $(MAKE) -j$(NUMJOBS)
+	cd $(BUILDDIR1) && $(MAKE) -j$(NUMJOBS)
+	cp -ra $(BUILDDIR1) $(BUILDDIR2)
+	cd $(BUILDDIR2) && find . -type f -iname '*make*' -exec sed -i "s|$(BUILDDIR1)|$(BUILDDIR2)|" {} \;
+	cd $(BUILDDIR2) && cmake $(CMAKEOPTS) $(OPTSSTEP2)
+	cd $(BUILDDIR2) && $(MAKE) -j$(NUMJOBS)
 
 override_dh_auto_clean:
 	dh_testroot
-	[ ! -f Makefile ] || ( cd $(DEB_BUILDDIR) && $(MAKE) clean )
-	[ ! -d $(DEB_BUILDDIR) ] || rm -r $(DEB_BUILDDIR)
+	[ ! -f Makefile ] || ( cd $(BUILDDIR1) && $(MAKE) clean )
+	[ ! -f Makefile ] || ( cd $(BUILDDIR2) && $(MAKE) clean )
+	[ ! -d $(BUILDDIR1) ] || rm -r $(BUILDDIR1)
+	[ ! -d $(BUILDDIR2) ] || rm -r $(BUILDDIR2)
 	rm -f configure-stamp build-stamp
 
 override_dh_auto_install:
-	cd $(DEB_BUILDDIR) && $(MAKE) install DESTDIR=$(DEB_DH_INSTALL_SOURCEDIR)
+	cd $(BUILDDIR1) && $(MAKE) install DESTDIR=$(DEB_DH_INSTALL_SOURCEDIR)
+	cp $(CURDIR)/debian/eiskaltdcpp-qt-mini.desktop \
+			$(DEB_DH_INSTALL_SOURCEDIR)/usr/share/applications/eiskaltdcpp-qt-mini.desktop
+	cp $(BUILDDIR2)/eiskaltdcpp-qt/eiskaltdcpp-qt \
+			$(DEB_DH_INSTALL_SOURCEDIR)/usr/bin/eiskaltdcpp-qt-mini
+	chrpath -d $(DEB_DH_INSTALL_SOURCEDIR)/usr/bin/eiskaltdcpp-qt-mini
+	cp $(BUILDDIR2)/eiskaltdcpp-qt/eiskaltdcpp-qt.1.gz \
+			$(DEB_DH_INSTALL_SOURCEDIR)/usr/share/man/man1/eiskaltdcpp-qt-mini.1.gz
+	cp $(CURDIR)/debian/eiskaltdcpp-gtk3.desktop \
+			$(DEB_DH_INSTALL_SOURCEDIR)/usr/share/applications/eiskaltdcpp-gtk3.desktop
+	cp $(BUILDDIR2)/eiskaltdcpp-gtk/eiskaltdcpp-gtk \
+			$(DEB_DH_INSTALL_SOURCEDIR)/usr/bin/eiskaltdcpp-gtk3
+	chrpath -d $(DEB_DH_INSTALL_SOURCEDIR)/usr/bin/eiskaltdcpp-gtk3
+	cp $(BUILDDIR2)/eiskaltdcpp-gtk/eiskaltdcpp-gtk.1.gz \
+			$(DEB_DH_INSTALL_SOURCEDIR)/usr/share/man/man1/eiskaltdcpp-gtk3.1.gz
 
 override_dh_install:
 	dh_movefiles
@@ -65,10 +94,17 @@ override_dh_installchangelogs:
 
 .PHONY: override_dh_strip
 override_dh_strip:
-	dh_strip -Nlibeiskaltdcpp2.2 -Neiskaltdcpp-qt -Neiskaltdcpp-gtk -Neiskaltdcpp-daemon
+	dh_strip -Nlibeiskaltdcpp2.2 \
+			-Neiskaltdcpp-qt \
+			-Neiskaltdcpp-qt-mini \
+			-Neiskaltdcpp-gtk \
+			-Neiskaltdcpp-gtk3 \
+			-Neiskaltdcpp-daemon
 	dh_strip -plibeiskaltdcpp2.2 --dbg-package=libeiskaltdcpp2.2-dbg
 	dh_strip -peiskaltdcpp-qt --dbg-package=eiskaltdcpp-qt-dbg
+	dh_strip -peiskaltdcpp-qt-mini --dbg-package=eiskaltdcpp-qt-mini-dbg
 	dh_strip -peiskaltdcpp-gtk --dbg-package=eiskaltdcpp-gtk-dbg
+	dh_strip -peiskaltdcpp-gtk3 --dbg-package=eiskaltdcpp-gtk3-dbg
 	dh_strip -peiskaltdcpp-daemon --dbg-package=eiskaltdcpp-daemon-dbg
 
 .PHONY: override_dh_makeshlibs
@@ -82,5 +118,3 @@ override_dh_shlibdeps:
 get-orig-source:
 	wget -4 "http://eiskaltdc.googlecode.com/files/eiskaltdcpp-$(CUR_VER).tar.xz"
 	mv -f "$(PACKAGE)-$(CUR_VER).tar.xz" ../"$(PACKAGE)_$(CUR_VER).orig.tar.xz"
-
-.PHONY: override_dh_auto_test

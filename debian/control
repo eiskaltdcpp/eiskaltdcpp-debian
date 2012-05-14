@@ -5,7 +5,7 @@ Maintainer: Boris Pek <tehnick-8@mail.ru>
 Build-Depends: debhelper (>= 7.0.50~), po-debconf, autotools-dev,
  fakeroot, chrpath, pkg-config, cmake (>= 2.6.0),
  libqt4-dev (>=4.4.0), qt4-dev-tools (>=4.4.0), qt4-qtconfig (>=4.4.0),
- libgtk2.0-dev, libglade2-dev,
+ libgtk2.0-dev, libglade2-dev, libgtk-3-dev,
  libnotify-dev, liblua5.1-0-dev, libpcre3-dev, libboost-dev,
  libbz2-dev, zlib1g-dev, libssl-dev, libaspell-dev,
  libminiupnpc-dev, libidn11-dev, libattr1-dev
@@ -20,7 +20,9 @@ Section: metapackages
 Architecture: all
 Depends: ${misc:Depends},
  eiskaltdcpp-qt (>= ${binary:Version}) |
- eiskaltdcpp-gtk (>= ${binary:Version}),
+ eiskaltdcpp-qt-mini (>= ${binary:Version}) |
+ eiskaltdcpp-gtk (>= ${binary:Version}) |
+ eiskaltdcpp-gtk3 (>= ${binary:Version}),
  eiskaltdcpp-emoticons,
  eiskaltdcpp-scripts,
  eiskaltdcpp-sounds
@@ -121,6 +123,21 @@ Description: DC++ kernel from EiskaltDC++ (debug symbols)
  from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
  common DC hub software.
 
+Package: libeiskaltdcpp2.2-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends},
+ libeiskaltdcpp2.2 (= ${binary:Version})
+Replaces: libeiskaltdcpp2.2-dev-unstable
+Conflicts: libeiskaltdcpp2.2-dev-unstable
+Description: DC++ kernel from EiskaltDC++ (development files)
+ This package contains header files for EiskaltDC++ kernel library.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with other DC clients, such as the original DC
+ from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
+ common DC hub software.
+
 Package: eiskaltdcpp-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
@@ -133,6 +150,25 @@ Conflicts: eiskaltdcpp-qt-unstable
 Breaks: eiskaltdcpp (<< 2.1.0)
 Description: EiskaltDC++ GUI on Qt
  This package installs only EiskaltDC++ with GUI based on Qt.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with other DC clients, such as the original DC
+ from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
+ common DC hub software.
+
+Package: eiskaltdcpp-qt-mini
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ eiskaltdcpp-qt-data (= ${source:Version}),
+ eiskaltdcpp-common
+Replaces: eiskaltdcpp-qt-mini-unstable
+Conflicts: eiskaltdcpp-qt-mini-unstable
+Description: EiskaltDC++ GUI on Qt (stripped-down version)
+ This package installs only EiskaltDC++ with GUI based on Qt. This is
+ stripped-down version of program. Such features were disabled:
+  - Qt Declarative UI support
+  - QtScript basic support
+  - SQLite support
  .
  EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
  protocols. It is compatible with other DC clients, such as the original DC
@@ -174,6 +210,27 @@ Description: EiskaltDC++ GUI on Qt (debug symbols)
  from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
  common DC hub software.
 
+Package: eiskaltdcpp-qt-mini-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends},
+ eiskaltdcpp-qt-mini (= ${binary:Version}),
+ libeiskaltdcpp2.2-dbg (= ${binary:Version})
+Replaces: eiskaltdcpp-qt-mini-unstable-dbg
+Conflicts: eiskaltdcpp-qt-mini-unstable-dbg
+Description: EiskaltDC++ GUI on Qt (stripped-down version) (debug symbols)
+ This package contains the debugging symbols for EiskaltDC++ Qt. This is
+ stripped-down version of program. Such features were disabled:
+  - Qt Declarative UI support
+  - QtScript basic support
+  - SQLite support
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with other DC clients, such as the original DC
+ from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
+ common DC hub software.
+
 Package: eiskaltdcpp-gtk
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
@@ -184,6 +241,23 @@ Conflicts: eiskaltdcpp-gtk-unstable
 Description: EiskaltDC++ GUI on Gtk
  This package installs only EiskaltDC++ with GUI based on Gtk
  (based on FreeDC++ and LinuxDC++).
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with other DC clients, such as the original DC
+ from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
+ common DC hub software.
+
+Package: eiskaltdcpp-gtk3
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ eiskaltdcpp-gtk-data (= ${source:Version}),
+ eiskaltdcpp-common
+Replaces: eiskaltdcpp-gtk3-unstable
+Conflicts: eiskaltdcpp-gtk3-unstable
+Description: EiskaltDC++ GUI on Gtk3
+ This package installs only EiskaltDC++ with GUI based on Gtk3. This is an
+ experimental mode of GUI. If you have some problems use Gtk2 based UI instead
+ (package eiskaltdcpp-gtk-unstable).
  .
  EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
  protocols. It is compatible with other DC clients, such as the original DC
@@ -224,11 +298,29 @@ Description: EiskaltDC++ GUI on Gtk (debug symbols)
  from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
  common DC hub software.
 
+Package: eiskaltdcpp-gtk3-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: ${misc:Depends},
+ eiskaltdcpp-gtk3 (= ${binary:Version}),
+ libeiskaltdcpp2.2-dbg (= ${binary:Version})
+Replaces: eiskaltdcpp-gtk-unstable-dbg
+Conflicts: eiskaltdcpp-gtk-unstable-dbg
+Description: EiskaltDC++ GUI on Gtk3 (debug symbols)
+ This package contains the debugging symbols for EiskaltDC++ Gtk3.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with other DC clients, such as the original DC
+ from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
+ common DC hub software.
+
 Package: eiskaltdcpp-daemon
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Replaces: eiskaltdcpp-daemon-unstable
 Conflicts: eiskaltdcpp-daemon-unstable
+Suggests: eiskaltdcpp-cli
 Description: EiskaltDC++ daemon
  This package installs only EiskaltDC++ daemon (without any GUI).
  Support of control via JSON-RPC is enabled.
@@ -249,6 +341,25 @@ Replaces: eiskaltdcpp-daemon-unstable-dbg
 Conflicts: eiskaltdcpp-daemon-unstable-dbg
 Description: EiskaltDC++ daemon (debug symbols)
  This package contains the debugging symbols for EiskaltDC++ daemon.
+ .
+ EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
+ protocols. It is compatible with other DC clients, such as the original DC
+ from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
+ common DC hub software.
+
+Package: eiskaltdcpp-cli
+Architecture: all
+Depends: ${misc:Depends},
+ libgetopt-long-descriptive-perl,
+ libdata-dump-perl,
+ libjson-rpc-perl,
+ libterm-shellui-perl
+Replaces: eiskaltdcpp-cli-unstable
+Conflicts: eiskaltdcpp-cli-unstable
+Suggests: eiskaltdcpp-daemon
+Description: EiskaltDC++ command-line interface
+ This package installs EiskaltDC++ CLI (command-line interface) written in perl.
+ This program is to control eiskaltdcpp-daemon via JSON-RPC protocol.
  .
  EiskaltDC++ is a cross-platform program that uses the Direct Connect and ADC
  protocols. It is compatible with other DC clients, such as the original DC
