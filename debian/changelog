@@ -1,105 +1,132 @@
-eiskaltdcpp (2.2.6-0ppa4~quantal1) quantal; urgency=low
+eiskaltdcpp (2.2.6-5ppa1~quantal1) quantal; urgency=low
+
+  * Package in Launchpad was synced with package in Debian.
+  * Changelog was cleaned.
+  * Embedded UPnP library is used in packages on Launchpad.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 15 May 2012 00:14:46 +0300
+
+eiskaltdcpp (2.2.6-5) unstable; urgency=low
+
+  * Added new packages:
+    - eiskaltdcpp-qt-mini and eiskaltdcpp-qt-mini-dbg
+    - eiskaltdcpp-gtk3 and eiskaltdcpp-gtk3-dbg
+    - eiskaltdcpp-cli and libeiskaltdcpp2.2-dev
+    (all related files were updated)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 14 May 2012 23:13:19 +0300
+
+eiskaltdcpp (2.2.6-4) unstable; urgency=low
 
   * Added patches:
     - debian/patches/fix-for-gcc-4.7.patch
     - debian/patches/fix-crash-at-launch-time.patch
 
- -- Boris Pek <tehnick-8@mail.ru>  Sat, 12 May 2012 21:46:58 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 10 May 2012 19:22:30 +0300
 
-eiskaltdcpp (2.2.6-0ppa3~precise1) precise; urgency=low
+eiskaltdcpp (2.2.6-3) unstable; urgency=low
 
   * Few patches were backported from version 2.2.7 which is not yet released:
     - debian/patches/fixed-blur-icon-in-the-D-Bus-notifications-in-Ubuntu.patch
     - debian/patches/correctly-save-header-state-for-tree-views.patch
     - debian/patches/fixed-crash-on-exit.patch (LP: #944675)
 
- -- Boris Pek <tehnick-8@mail.ru>  Tue, 10 Apr 2012 00:49:02 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 10 Apr 2012 23:20:06 +0300
 
-eiskaltdcpp (2.2.6-0ppa2~precise1) precise; urgency=low
+eiskaltdcpp (2.2.6-2) unstable; urgency=low
 
   * debian/rules was updated: now dh is used instead of direct dh_* commands.
     (fixes FTBFS with new build-arch handling) (Closes: #665865)
-  * Small fix in debian/control.
 
- -- Boris Pek <tehnick-8@mail.ru>  Sat, 31 Mar 2012 12:43:38 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 27 Mar 2012 02:33:00 +0300
 
-eiskaltdcpp (2.2.6-0ppa1~precise1) precise; urgency=low
+eiskaltdcpp (2.2.6-1) unstable; urgency=low
 
   * Update to stable release 2.2.6.
-  * New package libeiskaltdcpp2.2-dev was added.
-  * d/copyright was updated:
-    - URI in Format field was updated.
-    - Copyright information was updated.
+  * Bumped Standards-Version to 3.9.3.
+  * debian/control was updated:
+    - added string `DM-Upload-Allowed: yes'
+    - added dependence from libattr1 library
+    - updated long descriptions in all packages
+    - updated dependencies of meta-package eiskaltdcpp:
+      now user has choice to install one of packages with GUI or few ones
+      (not only all of them as was earlier)
+    - meta-package eiskaltdcpp was moved to new archive section metapackages
+    - removed old libraries from libeiskaltdcpp2.2 Conflicts and Replaces
+      (these libraries never were in Debian or Ubuntu releases)
+  * debian/copyright was updated:
+    - URL in Format field was updated
+    - copyright information was updated (copyrighters and years)
+  * debian/rules was updated:
+    - configure-stamp and build-stamp files are removed during clean now
+    - uscan is used for checking current upstream version
+      (dpkg-parsechangelog was used earlier)
 
- -- Boris Pek <tehnick-8@mail.ru>  Tue, 21 Feb 2012 01:52:42 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 27 Feb 2012 03:14:03 +0200
 
-eiskaltdcpp (2.2.5-0ppa3~precise1) precise; urgency=low
-
-  * Added package eiskaltdcpp-cli.
-
- -- Boris Pek <tehnick-8@mail.ru>  Fri, 03 Feb 2012 01:00:34 +0200
-
-eiskaltdcpp (2.2.5-0ppa2~precise1) precise; urgency=low
-
-  * Added packages:
-      eiskaltdcpp-qt-mini and eiskaltdcpp-gtk3,
-      eiskaltdcpp-qt-mini-dbg and eiskaltdcpp-gtk3-dbg.
-  * Dependencies of meta-package eiskaltdcpp were updated:
-    now user has choise to install one of packages with GUI,
-    few ones or even all of them.
-  * Updated long description for package eiskaltdcpp-daemon.
-
- -- Boris Pek <tehnick-8@mail.ru>  Tue, 10 Jan 2012 01:49:38 +0200
-
-eiskaltdcpp (2.2.5-0ppa1~precise1) precise; urgency=low
+eiskaltdcpp (2.2.5-1) unstable; urgency=low
 
   * Update to stable release 2.2.5.
+  * debian/copyright was updated:
+    - source tree was reorganized in upstream
+    - new files were added into source tree
+  * debian/eiskaltdcpp-sounds.docs was updated.
+  * debian/rules was updated:
+    configurating options USE_QT_QML and JSONRPC_DAEMON were enabled.
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 26 Dec 2011 02:12:50 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 26 Dec 2011 23:22:08 +0200
 
-eiskaltdcpp (2.2.4-2ppa1~precise1) precise; urgency=low
+eiskaltdcpp (2.2.4-2) unstable; urgency=low
 
-  * Package on Launchpad was sync with package in Debian.
+  * Additional fields Vcs-Git and Vcs-Browser in debian/control were updated.
+  * Additional section get-orig-source was added in debian/rules.
+  * File debian/copyright was rewritten in according to DEP-5.
+  * File debian/libeiskaltdcpp2.2.lintian-overrides was added:
+    It hide lintian information note no-symbols-control-file.
+    (There is no stable API in this library)
 
- -- Boris Pek <tehnick-8@mail.ru>  Mon, 05 Dec 2011 23:58:28 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 09 Oct 2011 03:35:24 +0300
 
-eiskaltdcpp (2.2.4-0ppa1~oneiric1) oneiric; urgency=low
+eiskaltdcpp (2.2.4-1) unstable; urgency=low
 
   * Update to stable release 2.2.4.
+  * Updated file debian/copyright:
+    - new author was added in upstream
+    - new files were added in upstream
+  * Updated file debian/rules:
+    - enabled DHT support in configurating options
 
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 02 Oct 2011 18:44:07 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Sun, 02 Oct 2011 19:12:57 +0300
 
-eiskaltdcpp (2.2.3-0ppa1~oneiric1) oneiric; urgency=low
+eiskaltdcpp (2.2.3-1) unstable; urgency=low
 
   * Update to stable release 2.2.3.
+  * Added additional fields Vcs-Git and Vcs-Browser in debian/control.
+  * Such bugs were fixed in upstream:
+    - added German translation (Closes: #627930)
+    - fixed bug with connecting to ADC hubs on armel architecture
+      (Closes: #630841)
+    - updated local file cmake/FindGTK2.cmake:
+      it works with Debian multiarch now (LP: #791231)
+  * Fixed new lintian warning 'debian-rules-missing-recommended-target'.
+  * Updated file debian/copyright: new files were added in upstream.
 
- -- Boris Pek <tehnick-8@mail.ru>  Fri, 24 Jun 2011 23:42:04 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Sat, 25 Jun 2011 01:11:16 +0300
 
-eiskaltdcpp (2.2.2-0ppa1~natty1) natty; urgency=low
+eiskaltdcpp (2.2.2-1) unstable; urgency=low
 
   * Update to stable release 2.2.2.
+  * Added dependence from libminiupnpc library (linked dynamically)
+    now it is used instead local copy of miniupnpc (was linked statically).
+  * Added dependence from libidn11 library (new program requirement).
 
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 24 Apr 2011 22:18:49 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 25 Apr 2011 00:44:55 +0300
 
-eiskaltdcpp (2.2.1-0ppa1~natty1) natty; urgency=low
+eiskaltdcpp (2.2.1-1) unstable; urgency=low
 
   * Update to stable release 2.2.1.
 
- -- Boris Pek <tehnick-8@mail.ru>  Tue, 08 Mar 2011 20:31:35 +0200
-
-eiskaltdcpp (2.2.0-3ppa2~natty1) natty; urgency=low
-
-  * Fix in debian/eiskaltdcpp-scripts.files
-
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 13 Feb 2011 12:54:30 +0200
-
-eiskaltdcpp (2.2.0-3ppa1~natty1) natty; urgency=low
-
-  * Package on Launchpad was sync with package in Debian.
-  * Changelog was cleaned.
-  * UPnP was switched on in packages on Launchpad.
-
- -- Boris Pek <tehnick-8@mail.ru>  Sun, 13 Feb 2011 12:23:45 +0200
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 08 Mar 2011 21:00:59 +0200
 
 eiskaltdcpp (2.2.0-3) unstable; urgency=low
 
