@@ -349,7 +349,7 @@ Description: EiskaltDC++ daemon (debug symbols)
 
 Package: eiskaltdcpp-cli
 Architecture: all
-Depends: ${misc:Depends},
+Depends: ${perl:Depends}, ${misc:Depends},
  libgetopt-long-descriptive-perl,
  libdata-dump-perl,
  libjson-rpc-perl,

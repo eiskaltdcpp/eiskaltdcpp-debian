@@ -1,3 +1,10 @@
+eiskaltdcpp (2.2.7-1) unstable; urgency=low
+
+  * Update to stable release 2.2.7.
+  * debian/patches were deleted: now available in upstream.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Wed, 30 May 2012 01:17:06 +0300
+
 eiskaltdcpp (2.2.6-5) unstable; urgency=low
 
   * Added new packages:
