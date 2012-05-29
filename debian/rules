@@ -118,3 +118,5 @@ override_dh_shlibdeps:
 get-orig-source:
 	wget -4 "http://eiskaltdc.googlecode.com/files/eiskaltdcpp-$(CUR_VER).tar.xz"
 	mv -f "$(PACKAGE)-$(CUR_VER).tar.xz" ../"$(PACKAGE)_$(CUR_VER).orig.tar.xz"
+
+.PHONY: override_dh_auto_test

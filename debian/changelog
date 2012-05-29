@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.7-0ppa1~quantal1) quantal; urgency=low
+
+  * Update to stable release 2.2.7.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 29 May 2012 22:33:52 +0300
+
 eiskaltdcpp (2.2.6-5ppa1~quantal1) quantal; urgency=low
 
   * Package in Launchpad was synced with package in Debian.

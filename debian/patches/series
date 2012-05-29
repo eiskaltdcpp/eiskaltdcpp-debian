@@ -1,5 +1,0 @@
-fix-for-gcc-4.7.patch
-fix-crash-on-exit.patch
-fix-crash-at-launch-time.patch
-fix-blur-icon-in-the-D-Bus-notifications-in-Ubuntu.patch
-correctly-save-header-state-for-tree-views.patch
