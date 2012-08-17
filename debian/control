@@ -123,13 +123,13 @@ Description: DC++ kernel from EiskaltDC++ (debug symbols)
  from Neomodus, DC++ and derivatives. EiskaltDC++ also interoperates with all
  common DC hub software.
 
-Package: libeiskaltdcpp2.2-dev
+Package: libeiskaltdcpp-dev
 Section: libdevel
 Architecture: any
 Depends: ${misc:Depends},
  libeiskaltdcpp2.2 (= ${binary:Version})
-Replaces: libeiskaltdcpp2.2-dev-unstable
-Conflicts: libeiskaltdcpp2.2-dev-unstable
+Replaces: libeiskaltdcpp-dev-unstable
+Conflicts: libeiskaltdcpp-dev-unstable
 Description: DC++ kernel from EiskaltDC++ (development files)
  This package contains header files for EiskaltDC++ kernel library.
  .
