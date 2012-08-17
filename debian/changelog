@@ -10,7 +10,7 @@ eiskaltdcpp (2.2.6-5) unstable; urgency=low
   * Added new packages:
     - eiskaltdcpp-qt-mini and eiskaltdcpp-qt-mini-dbg
     - eiskaltdcpp-gtk3 and eiskaltdcpp-gtk3-dbg
-    - eiskaltdcpp-cli and libeiskaltdcpp2.2-dev
+    - eiskaltdcpp-cli and libeiskaltdcpp-dev
   * debian/rules was updated:
     used hardening flags in compiler options
 
