@@ -19,7 +19,7 @@ eiskaltdcpp (2.2.7-0ppa1~quantal1) quantal; urgency=low
 
 eiskaltdcpp (2.2.6-5ppa1~quantal1) quantal; urgency=low
 
-  * Package in Launchpad was synced with package in Debian.
+  * Package in Launchpad was sync with package in Debian.
   * Changelog was cleaned.
   * Embedded UPnP library is used in packages on Launchpad.
 
