@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.7-2) unstable; urgency=low
+
+  * Move package to unstable: no changes required.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Tue, 14 May 2013 21:22:52 +0300
+
 eiskaltdcpp (2.2.7-1) experimental; urgency=low
 
   * Update to stable release 2.2.7.
