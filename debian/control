@@ -14,7 +14,6 @@ Homepage: http://code.google.com/p/eiskaltdc/
 Vcs-Git: git://github.com/tehnick/eiskaltdcpp-debian.git
 Vcs-Browser: https://github.com/tehnick/eiskaltdcpp-debian
 Standards-Version: 3.9.3
-DM-Upload-Allowed: yes
 
 Package: eiskaltdcpp
 Section: metapackages
