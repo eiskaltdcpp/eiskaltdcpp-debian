@@ -1,3 +1,16 @@
+eiskaltdcpp (2.2.8-1) unstable; urgency=low
+
+  * Update to stable release 2.2.8.
+  * Remove obsolete DM-Upload-Allowed flag.
+  * Bump Standards-Version to 3.9.4 (was 3.9.3): no changes required.
+  * Fix lintian note desktop-entry-lacks-keywords-entry.
+  * Simplify debian/rules.
+  * Fixed in upstream:
+    - fixed bashism in sample script (Closes: #690621)
+    - fixed buffer overflow error on exit (LP: #996804)
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 24 Jun 2013 03:58:15 +0300
+
 eiskaltdcpp (2.2.7-3) unstable; urgency=low
 
   * Update debian/rules: configure with -DCHECK_GTK_DEPRECATED=OFF instead of
