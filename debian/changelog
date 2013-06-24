@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.8-0ppa1~saucy1) saucy; urgency=low
+
+  * Update to stable release 2.2.8.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 24 Jun 2013 02:55:37 +0300
+
 eiskaltdcpp (2.2.7+1-0ppa2~quantal1) quantal; urgency=low
 
   * Package libeiskaltdcpp2.2-dev was renamed to libeiskaltdcpp-dev.
