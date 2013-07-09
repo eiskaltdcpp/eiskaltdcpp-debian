@@ -1,8 +1,25 @@
-eiskaltdcpp (2.2.7-2~bpo70+1) wheezy-backports; urgency=low
+eiskaltdcpp (2.2.8-1) unstable; urgency=low
 
-  * Rebuild for wheezy-backports.
+  * Update to stable release 2.2.8.
+  * Remove obsolete DM-Upload-Allowed flag.
+  * Bump Standards-Version to 3.9.4 (was 3.9.3): no changes required.
+  * Fix lintian note desktop-entry-lacks-keywords-entry.
+  * Simplify debian/rules.
+  * Fixed in upstream:
+    - fixed bashism in sample script (Closes: #690621)
+    - fixed buffer overflow error on exit (LP: #996804)
 
- -- Boris Pek <tehnick-8@mail.ru>  Tue, 28 May 2013 21:49:07 +0300
+ -- Boris Pek <tehnick-8@mail.ru>  Mon, 24 Jun 2013 03:58:15 +0300
+
+eiskaltdcpp (2.2.7-3) unstable; urgency=low
+
+  * Update debian/rules: configure with -DCHECK_GTK_DEPRECATED=OFF instead of
+    -DCHECK_GTK_DEPRECATED=ON to fix FTBFS with Gtk+ >= 2.24.18
+  * Update debian/control: add build dependency from libboost-system-dev
+    (Fixes FTBFS on Ubuntu Saucy due to Boost transition 1.49 --> 1.53)
+  * Update years in debian/copyright.
+
+ -- Boris Pek <tehnick-8@mail.ru>  Thu, 30 May 2013 11:14:05 +0300
 
 eiskaltdcpp (2.2.7-2) unstable; urgency=low
 
