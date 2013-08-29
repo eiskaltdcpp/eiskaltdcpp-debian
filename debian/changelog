@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.9-0ppa1~saucy1) saucy; urgency=low
+
+  * Update to stable release 2.2.9.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 29 Aug 2013 22:04:32 +0300
+
 eiskaltdcpp (2.2.8-1) unstable; urgency=low
 
   * Update to stable release 2.2.8.
