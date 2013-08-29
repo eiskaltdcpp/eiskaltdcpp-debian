@@ -1,3 +1,13 @@
+eiskaltdcpp (2.2.9-1) unstable; urgency=low
+
+  * Update to stable release 2.2.9.
+  * Update debian/copyright.
+  * Fixed in upstream:
+    - fixed SIGABRT when gdk_display_get_default() returns NULL (LP: #968761)
+    - fixed work with libjson-rpc-perl >= 1.00 (Closes: #719016)
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 30 Aug 2013 00:14:15 +0300
+
 eiskaltdcpp (2.2.8-1) unstable; urgency=low
 
   * Update to stable release 2.2.8.
