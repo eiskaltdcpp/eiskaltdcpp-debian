@@ -1,10 +1,3 @@
-eiskaltdcpp (2.2.9-2) unstable; urgency=low
-
-  * Add debian/eiskaltdcpp-daemon.lintian-overrides:
-    embedded library libjsoncpp with a number of project-specific patches.
-
- -- Boris Pek <tehnick@debian.org>  Fri, 30 Aug 2013 01:16:19 +0300
-
 eiskaltdcpp (2.2.9-1) unstable; urgency=low
 
   * Update to stable release 2.2.9.
@@ -12,8 +5,10 @@ eiskaltdcpp (2.2.9-1) unstable; urgency=low
   * Fixed in upstream:
     - fixed SIGABRT when gdk_display_get_default() returns NULL (LP: #968761)
     - fixed work with libjson-rpc-perl >= 1.00 (Closes: #719016)
+  * Add debian/eiskaltdcpp-daemon.lintian-overrides:
+    embedded library libjsoncpp with a number of project-specific patches.
 
- -- Boris Pek <tehnick@debian.org>  Fri, 30 Aug 2013 00:14:15 +0300
+ -- Boris Pek <tehnick@debian.org>  Fri, 30 Aug 2013 07:10:33 +0300
 
 eiskaltdcpp (2.2.8-1) unstable; urgency=low
 
