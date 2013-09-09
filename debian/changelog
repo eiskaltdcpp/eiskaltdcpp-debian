@@ -1,8 +1,14 @@
-eiskaltdcpp (2.2.8-1~bpo70+1) wheezy-backports; urgency=low
+eiskaltdcpp (2.2.9-1) unstable; urgency=low
 
-  * Rebuild for wheezy-backports.
+  * Update to stable release 2.2.9.
+  * Update debian/copyright.
+  * Fixed in upstream:
+    - fixed SIGABRT when gdk_display_get_default() returns NULL (LP: #968761)
+    - fixed work with libjson-rpc-perl >= 1.00 (Closes: #719016)
+  * Add debian/eiskaltdcpp-daemon.lintian-overrides:
+    embedded library libjsoncpp with a number of project-specific patches.
 
- -- Boris Pek <tehnick@debian.org>  Tue, 09 Jul 2013 20:37:14 +0300
+ -- Boris Pek <tehnick@debian.org>  Fri, 30 Aug 2013 07:10:33 +0300
 
 eiskaltdcpp (2.2.8-1) unstable; urgency=low
 
