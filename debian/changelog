@@ -1,8 +1,26 @@
-eiskaltdcpp (2.2.9-0ppa1~saucy1) saucy; urgency=low
+eiskaltdcpp (2.2.9-2) unstable; urgency=medium
+
+  * Add patches:
+    - fix_work_with_new_libjson-rpc-perl.patch
+    - use_few_servers_for_getting_initial_list_of_DHT_nodes.patch
+    (Backported from upstream master branch.)
+  * Bump Standards-Version to 3.9.5 (was 3.9.4): no changes required.
+  * Update get-orig-source section in debian/rules.
+  * Update debian/watch.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 02 Jan 2014 20:24:11 +0400
+
+eiskaltdcpp (2.2.9-1) unstable; urgency=low
 
   * Update to stable release 2.2.9.
+  * Update debian/copyright.
+  * Fixed in upstream:
+    - fixed SIGABRT when gdk_display_get_default() returns NULL (LP: #968761)
+    - fixed work with libjson-rpc-perl >= 1.00 (Closes: #719016)
+  * Add debian/eiskaltdcpp-daemon.lintian-overrides:
+    embedded library libjsoncpp with a number of project-specific patches.
 
- -- Boris Pek <tehnick@debian.org>  Thu, 29 Aug 2013 22:04:32 +0300
+ -- Boris Pek <tehnick@debian.org>  Fri, 30 Aug 2013 07:10:33 +0300
 
 eiskaltdcpp (2.2.8-1) unstable; urgency=low
 
