@@ -1,3 +1,15 @@
+eiskaltdcpp (2.2.9-2) unstable; urgency=medium
+
+  * Add patches:
+    - fix_work_with_new_libjson-rpc-perl.patch
+    - use_few_servers_for_getting_initial_list_of_DHT_nodes.patch
+    (Backported from upstream master branch.)
+  * Bump Standards-Version to 3.9.5 (was 3.9.4): no changes required.
+  * Update get-orig-source section in debian/rules.
+  * Update debian/watch.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 02 Jan 2014 20:24:11 +0400
+
 eiskaltdcpp (2.2.9-1) unstable; urgency=low
 
   * Update to stable release 2.2.9.
