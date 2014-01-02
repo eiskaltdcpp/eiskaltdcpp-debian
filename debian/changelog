@@ -1,3 +1,10 @@
+eiskaltdcpp (2.2.9-2ppa1~trusty1) trusty; urgency=medium
+
+  * Package in Launchpad was sync with package in Debian.
+  * Changelog was cleaned.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 03 Jan 2014 01:00:29 +0400
+
 eiskaltdcpp (2.2.9-2) unstable; urgency=medium
 
   * Add patches:
