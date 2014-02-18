@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.9-2~bpo70+1) wheezy-backports; urgency=medium
+
+  * Rebuild for wheezy-backports.
+
+ -- Boris Pek <tehnick@debian.org>  Wed, 19 Feb 2014 01:49:25 +0400
+
 eiskaltdcpp (2.2.9-2) unstable; urgency=medium
 
   * Add patches:
