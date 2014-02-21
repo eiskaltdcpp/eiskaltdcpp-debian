@@ -1,3 +1,11 @@
+eiskaltdcpp (2.2.9-3) unstable; urgency=medium
+
+  * Add debian/patches/fix_TigerHash_on_ARM.patch:
+    Fix program segfault on some ARM environments.
+    Problem is actual for users of Ubuntu and Raspbian.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 21 Feb 2014 03:50:19 +0400
+
 eiskaltdcpp (2.2.9-2) unstable; urgency=medium
 
   * Add patches:
