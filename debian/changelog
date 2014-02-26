@@ -1,8 +1,10 @@
-eiskaltdcpp (2.2.9-2~bpo70+1) wheezy-backports; urgency=medium
+eiskaltdcpp (2.2.9-3) unstable; urgency=medium
 
-  * Rebuild for wheezy-backports.
+  * Add debian/patches/fix_TigerHash_on_ARM.patch:
+    Fix program segfault on some ARM environments.
+    Problem is actual for users of Ubuntu and Raspbian.
 
- -- Boris Pek <tehnick@debian.org>  Wed, 19 Feb 2014 01:49:25 +0400
+ -- Boris Pek <tehnick@debian.org>  Fri, 21 Feb 2014 03:50:19 +0400
 
 eiskaltdcpp (2.2.9-2) unstable; urgency=medium
 
