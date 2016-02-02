@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 7.0.50~), po-debconf, autotools-dev,
  libboost-dev, libboost-system-dev,
  libbz2-dev, zlib1g-dev, libssl-dev, libaspell-dev,
  libminiupnpc-dev, libidn11-dev, libattr1-dev
-Homepage: http://code.google.com/p/eiskaltdc/
+Homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
 Vcs-Git: git://github.com/tehnick/eiskaltdcpp-debian.git
 Vcs-Browser: https://github.com/tehnick/eiskaltdcpp-debian
 Standards-Version: 3.9.5
