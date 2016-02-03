@@ -2,11 +2,8 @@ Source: eiskaltdcpp
 Section: net
 Priority: optional
 Maintainer: Boris Pek <tehnick@debian.org>
-Build-Depends: autotools-dev,
-               chrpath,
-               cmake (>= 2.6.0),
+Build-Depends: cmake,
                debhelper (>= 9),
-               fakeroot,
                libaspell-dev,
                libattr1-dev,
                libboost-dev,
@@ -20,12 +17,11 @@ Build-Depends: autotools-dev,
                libminiupnpc-dev,
                libnotify-dev,
                libpcre3-dev,
-               libqt4-dev (>=4.4.0),
+               libqt4-dev,
                libssl-dev,
                pkg-config,
                po-debconf,
-               qt4-dev-tools (>=4.4.0),
-               qt4-qtconfig (>=4.4.0),
+               qt4-dev-tools,
                zlib1g-dev
 Homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
 Vcs-Git: git://github.com/tehnick/eiskaltdcpp-debian.git
