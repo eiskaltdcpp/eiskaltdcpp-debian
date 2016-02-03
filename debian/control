@@ -2,7 +2,8 @@ Source: eiskaltdcpp
 Section: net
 Priority: optional
 Maintainer: Boris Pek <tehnick@debian.org>
-Build-Depends: cmake,
+Build-Depends: chrpath,
+               cmake,
                debhelper (>= 9),
                libaspell-dev,
                libattr1-dev,
