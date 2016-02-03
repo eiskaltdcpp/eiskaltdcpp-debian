@@ -40,7 +40,7 @@ Depends: eiskaltdcpp-emoticons,
          eiskaltdcpp-scripts,
          eiskaltdcpp-sounds,
          ${misc:Depends}
-Description: EiskaltDC++ meta-package
+Description: EiskaltDC++ metapackage
  This package installs the most popular and recommended combination of
  EiskaltDC++ related packages.
  .
