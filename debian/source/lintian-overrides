@@ -1,0 +1,3 @@
+# False positives:
+eiskaltdcpp source: missing-license-paragraph-in-dep5-copyright expat
+eiskaltdcpp source: missing-license-paragraph-in-dep5-copyright gpl-3
