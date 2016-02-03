@@ -25,7 +25,7 @@ Build-Depends: chrpath,
                qt4-dev-tools,
                zlib1g-dev
 Homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
-Vcs-Git: git://github.com/tehnick/eiskaltdcpp-debian.git
+Vcs-Git: https://github.com/tehnick/eiskaltdcpp-debian.git
 Vcs-Browser: https://github.com/tehnick/eiskaltdcpp-debian
 Standards-Version: 3.9.6
 
