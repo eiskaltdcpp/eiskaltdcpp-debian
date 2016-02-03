@@ -32,7 +32,10 @@ Package: eiskaltdcpp
 Section: metapackages
 Architecture: all
 Depends: eiskaltdcpp-emoticons,
-         eiskaltdcpp-qt (>= ${binary:Version}) | eiskaltdcpp-qt-mini (>= ${binary:Version}) | eiskaltdcpp-gtk (>= ${binary:Version}) | eiskaltdcpp-gtk3 (>= ${binary:Version}),
+         eiskaltdcpp-qt (>= ${binary:Version}) |
+            eiskaltdcpp-qt-mini (>= ${binary:Version}) |
+            eiskaltdcpp-gtk (>= ${binary:Version}) |
+            eiskaltdcpp-gtk3 (>= ${binary:Version}),
          eiskaltdcpp-scripts,
          eiskaltdcpp-sounds,
          ${misc:Depends}
