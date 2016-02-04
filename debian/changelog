@@ -1,9 +1,39 @@
-eiskaltdcpp (2.2.9-2ppa1~trusty1) trusty; urgency=medium
+eiskaltdcpp (2.2.9-4) unstable; urgency=medium
 
-  * Package in Launchpad was sync with package in Debian.
-  * Changelog was cleaned.
+  * Bump Standards-Version to 3.9.6 (was 3.9.5): no changes required.
+  * Bump debhelper version to 9 (was 7.0.50~); update debian/compat.
+  * Add TLS_1.2_support.patch.
+  * Add fix_NMDC_bug.patch.
+  * Add fix-build-with-Clang.patch.
+    [Thanks to Alexander] (Closes: #753266)
+  * Update package using wrap-and-sort tool.
+  * Update debian/control:
+    - simplify Build-Depends
+    - update project Homepage (moved from Google Code to GitHub)
+    - delete outdated packages from Replaces, Conflicts and Breaks
+    - fix descriptions of eiskaltdcpp-gtk3 binary package
+      (it suggested nonexistent package) (Closes: #749774)
+    - update long decription of all binary packages
+    - fix lintian warning vcs-field-uses-insecure-uri
+    - fix lintian tag capitalization-error-in-description-synopsis
+      meta-package metapackage
+  * Update debian/rules: add --list-missing option for dh.
+  * Add debian/eiskaltdcpp-qt-data.lintian-overrides.
+  * Add debian/eiskaltdcpp-scripts.lintian-overrides.
+  * Add debian/source/lintian-overrides.
+  * Simplify debian/*.docs.
+  * Update debian/copyright.
+  * Update debian/watch.
 
- -- Boris Pek <tehnick@debian.org>  Fri, 03 Jan 2014 01:00:29 +0400
+ -- Boris Pek <tehnick@debian.org>  Thu, 04 Feb 2016 02:18:06 +0300
+
+eiskaltdcpp (2.2.9-3) unstable; urgency=medium
+
+  * Add debian/patches/fix_TigerHash_on_ARM.patch:
+    Fix program segfault on some ARM environments.
+    Problem is actual for users of Ubuntu and Raspbian.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 21 Feb 2014 03:50:19 +0400
 
 eiskaltdcpp (2.2.9-2) unstable; urgency=medium
 
