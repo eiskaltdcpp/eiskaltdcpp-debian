@@ -1,3 +1,10 @@
+eiskaltdcpp (2.2.9-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Build with OpenSSL 1.0 (Closes: #828290).
+
+ -- Andrey Rahmatullin <wrar@debian.org>  Tue, 03 Jan 2017 16:11:36 +0500
+
 eiskaltdcpp (2.2.9-4) unstable; urgency=medium
 
   * Bump Standards-Version to 3.9.6 (was 3.9.5): no changes required.
@@ -13,7 +20,7 @@ eiskaltdcpp (2.2.9-4) unstable; urgency=medium
     - delete outdated packages from Replaces, Conflicts and Breaks
     - fix descriptions of eiskaltdcpp-gtk3 binary package
       (it suggested nonexistent package) (Closes: #749774)
-    - update long description of all binary packages
+    - update long decription of all binary packages
     - fix lintian warning vcs-field-uses-insecure-uri
     - fix lintian tag capitalization-error-in-description-synopsis
       meta-package metapackage
