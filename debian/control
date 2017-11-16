@@ -124,6 +124,9 @@ Recommends: libqtscript4-core,
             libqtscript4-gui,
             libqtscript4-network,
             libqtscript4-xml
+Provides: eiskaltdcpp-qt-mini
+Replaces: eiskaltdcpp-qt-mini
+Conflicts: eiskaltdcpp-qt-mini
 Description: EiskaltDC++ GUI based on Qt
  This package installs only EiskaltDC++ with GUI based on Qt.
  .
@@ -152,6 +155,9 @@ Depends: eiskaltdcpp-common,
          eiskaltdcpp-gtk-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Provides: eiskaltdcpp-gtk3
+Replaces: eiskaltdcpp-gtk3
+Conflicts: eiskaltdcpp-gtk3
 Description: EiskaltDC++ GUI based on GTK+
  This package installs only EiskaltDC++ with GUI based on Gtk (based on
  FreeDC++ and LinuxDC++ projects).
