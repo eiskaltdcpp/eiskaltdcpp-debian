@@ -4,3 +4,4 @@ fix_TigerHash_on_ARM.patch
 TLS_1.2_support.patch
 fix_NMDC_bug.patch
 fix-build-with-Clang.patch
+add-compatibility-with-OpenSSL-1.1.x.patch
