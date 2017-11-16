@@ -3,17 +3,16 @@ Bug-Debian: http://bugs.debian.org/858436
 Applied-Upstream: 2.4.0
 Last-Update: 2017-11-16
 
-diff --git a/dcpp/CryptoManager.cpp b/dcpp/CryptoManager.cpp
 --- a/dcpp/CryptoManager.cpp
 +++ b/dcpp/CryptoManager.cpp
-@@ -101,10 +109,15 @@
+@@ -109,10 +109,15 @@
                  };
  
          if(dh) {
 -            dh->p = BN_bin2bn(dh4096_p, sizeof(dh4096_p), 0);
 -            dh->g = BN_bin2bn(dh4096_g, sizeof(dh4096_g), 0);
 -
--            if (!dh->p || !dh->g) {
+-            if(!dh->p || !dh->g) {
 +            BIGNUM *p = BN_bin2bn(dh4096_p, sizeof(dh4096_p), 0);
 +            BIGNUM *g = BN_bin2bn(dh4096_g, sizeof(dh4096_g), 0);
 +#if OPENSSL_VERSION_NUMBER < 0x10100000L
@@ -26,7 +25,6 @@ diff --git a/dcpp/CryptoManager.cpp b/dcpp/CryptoManager.cpp
                  dh.reset();
              } else {
                  SSL_CTX_set_options(serverContext, SSL_OP_SINGLE_DH_USE);
-diff --git a/dcpp/SSLSocket.cpp b/dcpp/SSLSocket.cpp
 --- a/dcpp/SSLSocket.cpp
 +++ b/dcpp/SSLSocket.cpp
 @@ -37,6 +37,13 @@
