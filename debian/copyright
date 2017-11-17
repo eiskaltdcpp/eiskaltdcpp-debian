@@ -179,7 +179,7 @@ License: BSD-3-clause
 Files: eiskaltdcpp-gtk/src/*
        eiskaltdcpp-gtk/ui/*
 Copyright: 2004-2010 Jens Oknelid <paskharen@gmail.com>
-           2009-2010 freedcpp
+           2009-2010 freedcpp <freedcpp@narod.ru>
            2009-2010 Leliksan Floyd <leliksan@Quadrafon2>
            2010-2012 Boris Pek <tehnick-8@mail.ru>
            2003 Bastien Nocera <hadess@hadess.net>
