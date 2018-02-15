@@ -5,3 +5,4 @@ TLS_1.2_support.patch
 fix_NMDC_bug.patch
 fix-build-with-Clang.patch
 add-compatibility-with-OpenSSL-1.1.x.patch
+fix-build-with-miniupnpc-2.0.x.patch
