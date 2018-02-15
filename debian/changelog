@@ -1,3 +1,12 @@
+eiskaltdcpp (2.2.9-7) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.1.3 (was 4.1.1): no changes required.
+  * Bump debhelper version to 11~ (was 9); update debian/compat.
+  * Add patch fix-build-with-miniupnpc-2.0.x. (Closes: #890507)
+  * Update years and URLs in debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 16 Feb 2018 01:02:48 +0300
+
 eiskaltdcpp (2.2.9-6) unstable; urgency=medium
 
   * Move to unstable: no changes required.
