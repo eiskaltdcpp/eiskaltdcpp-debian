@@ -1,3 +1,31 @@
+eiskaltdcpp (2.2.10+186+g1c0173ec-1) experimental; urgency=medium
+
+  * New Git snapshot. (Closes: #864977)
+  * Build with Qt5. (Closes: #874872)
+  * Delete all patches: already in upstream.
+  * Update debian/control:
+    - delete build dependencies from libqt4-dev and qt4-dev-tools
+    - add build dependencies from libqt5xmlpatterns5-dev, qtbase5-dev,
+      qtmultimedia5-dev, qtscript5-dev, qttools5-dev and qttools5-dev-tools
+    - rename package libeiskaltdcpp2.2 to libeiskaltdcpp2.4 to reflect change
+      of SOVERSION
+    - binary package eiskaltdcpp-qt now depends from libqt5sql5-sqlite instead
+      of libqt4-sql-sqlite
+    - binary package eiskaltdcpp-qt now recommends libqt5script5 and
+      libqt5scripttools5 instead of libqtscript4-core, libqtscript4-gui,
+      libqtscript4-network and libqtscript4-xml
+  * Update debian/rules:
+    - build with Qt5
+    - disable QML support
+    - delete --parallel and --list-missing options from dh
+    - use REPLACE_VERSION configuration option to set of proper program version
+  * Update debian/source/lintian-overrides.
+  * Update debian/libeiskaltdcpp-dev.links.
+  * Update debian/libeiskaltdcpp2.* files.
+  * Update debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Mon, 19 Feb 2018 02:49:13 +0300
+
 eiskaltdcpp (2.2.9-7) unstable; urgency=medium
 
   * Bump Standards-Version to 4.1.3 (was 4.1.1): no changes required.
