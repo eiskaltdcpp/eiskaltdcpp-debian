@@ -43,7 +43,7 @@ CMAKEOPTS = -DUSE_MINIUPNP=ON \
 
 
 %:
-	dh $@ --buildsystem=cmake --parallel --list-missing
+	dh $@ --buildsystem=cmake
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(CMAKEOPTS)
