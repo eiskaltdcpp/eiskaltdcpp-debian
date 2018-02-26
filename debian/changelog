@@ -1,3 +1,11 @@
+eiskaltdcpp (2.2.10+186+g1c0173ec-2) unstable; urgency=medium
+
+  * Move to unstable: no changes required.
+  * Package libeiskaltdcpp2.4 now Breaks and Replaces package
+    libeiskaltdcpp2.2. (Closes: #891006)
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 27 Feb 2018 01:34:29 +0300
+
 eiskaltdcpp (2.2.10+186+g1c0173ec-1) experimental; urgency=medium
 
   * New Git snapshot. (Closes: #864977)
