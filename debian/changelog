@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.9-7~bpo9+1) stretch-backports; urgency=medium
+
+  * Rebuild for stretch-backports.
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 27 Feb 2018 00:36:43 +0300
+
 eiskaltdcpp (2.2.9-7) unstable; urgency=medium
 
   * Bump Standards-Version to 4.1.3 (was 4.1.1): no changes required.
