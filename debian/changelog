@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.10+188+g1e72256a-2) unstable; urgency=medium
+
+  * Move to unstable: no changes required.
+
+ -- Boris Pek <tehnick@debian.org>  Mon, 05 Mar 2018 00:28:00 +0300
+
 eiskaltdcpp (2.2.10+188+g1e72256a-1) experimental; urgency=medium
 
   * New Git snapshot: provide build for Debian GNU/Hurd.
