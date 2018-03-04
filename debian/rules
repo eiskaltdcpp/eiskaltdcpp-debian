@@ -1,4 +1,5 @@
 #!/usr/bin/make -f
+include /usr/share/dpkg/pkg-info.mk
 
 PACKAGE = eiskaltdcpp
 
@@ -19,10 +20,11 @@ CMAKEOPTS = -DUSE_MINIUPNP=ON \
             -DWITH_DHT=ON \
             -DUSE_IDNA=ON \
             -DWITH_SOUNDS=ON \
-            -DUSE_QT=ON \
+            -DUSE_QT5=ON \
+            -DUSE_QT=OFF \
             -DUSE_QT_SQLITE=ON \
             -DUSE_JS=ON \
-            -DUSE_QT_QML=ON \
+            -DUSE_QT_QML=OFF \
             -DUSE_ASPELL=ON \
             -DFREE_SPACE_BAR_C=ON \
             -DUSE_GTK3=OFF \
@@ -36,11 +38,12 @@ CMAKEOPTS = -DUSE_MINIUPNP=ON \
             -DXMLRPC_DAEMON=OFF \
             -DJSONRPC_DAEMON=ON \
             -DUSE_CLI_JSONRPC=ON \
-            -DWITH_DEV_FILES=ON
+            -DWITH_DEV_FILES=ON \
+            -DREPLACE_VERSION="$(DEB_VERSION_UPSTREAM)"
 
 
 %:
-	dh $@ --buildsystem=cmake --parallel --list-missing
+	dh $@ --buildsystem=cmake
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(CMAKEOPTS)
