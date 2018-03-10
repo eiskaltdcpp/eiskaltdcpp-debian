@@ -1,8 +1,14 @@
-eiskaltdcpp (2.2.10+186+g1c0173ec-2~bpo9+1) stretch-backports; urgency=medium
+eiskaltdcpp (2.2.10+188+g1e72256a-2) unstable; urgency=medium
 
-  * Rebuild for stretch-backports.
+  * Move to unstable: no changes required.
 
- -- Boris Pek <tehnick@debian.org>  Mon, 05 Mar 2018 02:00:29 +0300
+ -- Boris Pek <tehnick@debian.org>  Mon, 05 Mar 2018 00:28:00 +0300
+
+eiskaltdcpp (2.2.10+188+g1e72256a-1) experimental; urgency=medium
+
+  * New Git snapshot: provide build for Debian GNU/Hurd.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 02 Mar 2018 01:45:04 +0300
 
 eiskaltdcpp (2.2.10+186+g1c0173ec-2) unstable; urgency=medium
 
