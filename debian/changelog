@@ -1,3 +1,20 @@
+eiskaltdcpp (2.2.10+340+g44d8aea4-1) unstable; urgency=medium
+
+  * New Git snapshot.
+  * Secure URLs: http --> https.
+  * Bump Standards-Version to 4.3.0 (was 4.1.3).
+  * Bump debhelper version to 12~ (was 11); update debian/compat.
+  * Simplify debian/rules:
+    - stop adding of CPPFLAGS into CXXFLAGS using of DEB_CXXFLAGS_MAINT_APPEND
+      as workaround for cmake because debhelper already does this since version
+      9.20120417
+    - delete --buildsystem=cmake option from dh
+    - delete get-orig-source section
+  * Add debian/upstream/metadata.
+  * Update debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Mon, 18 Feb 2019 02:08:15 +0300
+
 eiskaltdcpp (2.2.10+188+g1e72256a-2) unstable; urgency=medium
 
   * Move to unstable: no changes required.
