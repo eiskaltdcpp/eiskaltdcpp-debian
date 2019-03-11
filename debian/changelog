@@ -1,8 +1,19 @@
-eiskaltdcpp (2.2.10+188+g1e72256a-2~bpo9+1) stretch-backports; urgency=medium
+eiskaltdcpp (2.2.10+340+g44d8aea4-1) unstable; urgency=medium
 
-  * Rebuild for stretch-backports.
+  * New Git snapshot.
+  * Secure URLs: http --> https.
+  * Bump Standards-Version to 4.3.0 (was 4.1.3).
+  * Bump debhelper version to 12~ (was 11); update debian/compat.
+  * Simplify debian/rules:
+    - stop adding of CPPFLAGS into CXXFLAGS using of DEB_CXXFLAGS_MAINT_APPEND
+      as workaround for cmake because debhelper already does this since version
+      9.20120417
+    - delete --buildsystem=cmake option from dh
+    - delete get-orig-source section
+  * Add debian/upstream/metadata.
+  * Update debian/copyright.
 
- -- Boris Pek <tehnick@debian.org>  Sat, 10 Mar 2018 15:16:29 +0300
+ -- Boris Pek <tehnick@debian.org>  Mon, 18 Feb 2019 02:08:15 +0300
 
 eiskaltdcpp (2.2.10+188+g1e72256a-2) unstable; urgency=medium
 
@@ -362,7 +373,7 @@ eiskaltdcpp (2.2.0-1) unstable; urgency=low
 eiskaltdcpp (2.1.1-2) experimental; urgency=low
 
   * UPnP was temporary switched off because of sponsor's remark.
-    (also see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444392)
+    (See: https://bugs.debian.org/444392)
 
  -- Boris Pek <tehnick-8@mail.ru>  Sat, 11 Dec 2010 17:11:21 +0200
 
