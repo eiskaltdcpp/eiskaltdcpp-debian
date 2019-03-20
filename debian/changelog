@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.10+340+g44d8aea4-1ppa2~disco1) disco; urgency=medium
+
+  * Decrease debhelper version to 9 (was 12~); update debian/compat.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 21 Mar 2019 00:56:11 +0300
+
 eiskaltdcpp (2.2.10+340+g44d8aea4-1ppa1~disco1) disco; urgency=medium
 
   * Rebuild for Launchpad.
