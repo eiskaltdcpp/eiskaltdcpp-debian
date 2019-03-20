@@ -1,9 +1,82 @@
-eiskaltdcpp (2.2.9-5ppa1~bionic1) bionic; urgency=medium
+eiskaltdcpp (2.2.10+340+g44d8aea4-1) unstable; urgency=medium
 
-  * Sync package on Launchpad with package in Debian.
-  * Clean changelog.
+  * New Git snapshot.
+  * Secure URLs: http --> https.
+  * Bump Standards-Version to 4.3.0 (was 4.1.3).
+  * Bump debhelper version to 12~ (was 11); update debian/compat.
+  * Simplify debian/rules:
+    - stop adding of CPPFLAGS into CXXFLAGS using of DEB_CXXFLAGS_MAINT_APPEND
+      as workaround for cmake because debhelper already does this since version
+      9.20120417
+    - delete --buildsystem=cmake option from dh
+    - delete get-orig-source section
+  * Add debian/upstream/metadata.
+  * Update debian/copyright.
 
- -- Boris Pek <tehnick@debian.org>  Fri, 17 Nov 2017 03:33:13 +0300
+ -- Boris Pek <tehnick@debian.org>  Mon, 18 Feb 2019 02:08:15 +0300
+
+eiskaltdcpp (2.2.10+188+g1e72256a-2) unstable; urgency=medium
+
+  * Move to unstable: no changes required.
+
+ -- Boris Pek <tehnick@debian.org>  Mon, 05 Mar 2018 00:28:00 +0300
+
+eiskaltdcpp (2.2.10+188+g1e72256a-1) experimental; urgency=medium
+
+  * New Git snapshot: provide build for Debian GNU/Hurd.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 02 Mar 2018 01:45:04 +0300
+
+eiskaltdcpp (2.2.10+186+g1c0173ec-2) unstable; urgency=medium
+
+  * Move to unstable: no changes required.
+  * Package libeiskaltdcpp2.4 now Breaks and Replaces package
+    libeiskaltdcpp2.2. (Closes: #891006)
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 27 Feb 2018 01:34:29 +0300
+
+eiskaltdcpp (2.2.10+186+g1c0173ec-1) experimental; urgency=medium
+
+  * New Git snapshot. (Closes: #864977)
+  * Build with Qt5. (Closes: #874872)
+  * Delete all patches: already in upstream.
+  * Update debian/control:
+    - delete build dependencies from libqt4-dev and qt4-dev-tools
+    - add build dependencies from libqt5xmlpatterns5-dev, qtbase5-dev,
+      qtmultimedia5-dev, qtscript5-dev, qttools5-dev and qttools5-dev-tools
+    - rename package libeiskaltdcpp2.2 to libeiskaltdcpp2.4 to reflect change
+      of SOVERSION
+    - binary package eiskaltdcpp-qt now depends from libqt5sql5-sqlite instead
+      of libqt4-sql-sqlite
+    - binary package eiskaltdcpp-qt now recommends libqt5script5 and
+      libqt5scripttools5 instead of libqtscript4-core, libqtscript4-gui,
+      libqtscript4-network and libqtscript4-xml
+  * Update debian/rules:
+    - build with Qt5
+    - disable QML support
+    - delete --parallel and --list-missing options from dh
+    - use REPLACE_VERSION configuration option to set of proper program version
+  * Update debian/source/lintian-overrides.
+  * Update debian/libeiskaltdcpp-dev.links.
+  * Update debian/libeiskaltdcpp2.* files.
+  * Update debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Mon, 19 Feb 2018 02:49:13 +0300
+
+eiskaltdcpp (2.2.9-7) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.1.3 (was 4.1.1): no changes required.
+  * Bump debhelper version to 11~ (was 9); update debian/compat.
+  * Add patch fix-build-with-miniupnpc-2.0.x. (Closes: #890507)
+  * Update years and URLs in debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 16 Feb 2018 01:02:48 +0300
+
+eiskaltdcpp (2.2.9-6) unstable; urgency=medium
+
+  * Move to unstable: no changes required.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 17 Nov 2017 05:02:37 +0300
 
 eiskaltdcpp (2.2.9-5) experimental; urgency=medium
 
@@ -300,7 +373,7 @@ eiskaltdcpp (2.2.0-1) unstable; urgency=low
 eiskaltdcpp (2.1.1-2) experimental; urgency=low
 
   * UPnP was temporary switched off because of sponsor's remark.
-    (also see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=444392)
+    (See: https://bugs.debian.org/444392)
 
  -- Boris Pek <tehnick-8@mail.ru>  Sat, 11 Dec 2010 17:11:21 +0200
 
