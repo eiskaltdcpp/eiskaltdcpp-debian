@@ -35,7 +35,7 @@ CMAKEOPTS = -DUSE_MINIUPNP=ON \
 
 
 %:
-	dh $@
+	dh $@ --parallel
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(CMAKEOPTS)
