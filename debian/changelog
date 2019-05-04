@@ -1,3 +1,12 @@
+eiskaltdcpp (2.2.10+569+gbbc0b7ce-1) experimental; urgency=medium
+
+  * New Git snapshot.
+  * Update short and long descriptions of all packages.
+  * Cosmetic changes in debian/rules.
+  * Update debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Sun, 05 May 2019 00:39:19 +0300
+
 eiskaltdcpp (2.2.10+340+g44d8aea4-1) unstable; urgency=medium
 
   * New Git snapshot.
