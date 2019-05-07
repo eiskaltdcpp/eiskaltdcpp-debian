@@ -1,3 +1,9 @@
+eiskaltdcpp (2.2.10+583+g17a6b034-1) experimental; urgency=medium
+
+  * New Git snapshot: fixed build in Debian GNU/Hurd.
+
+ -- Boris Pek <tehnick@debian.org>  Tue, 07 May 2019 03:33:27 +0300
+
 eiskaltdcpp (2.2.10+569+gbbc0b7ce-1) experimental; urgency=medium
 
   * New Git snapshot.
