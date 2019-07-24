@@ -1,3 +1,13 @@
+eiskaltdcpp (2.2.10+583+g17a6b034-2) unstable; urgency=medium
+
+  * Move to unstable: no changes required.
+  * Update debian/control:
+    - update URLs in Vcs-* fields
+    - bump Standards-Version to 4.4.0 (was 4.3.0): no changes required
+    - update long descriptions of binary packages
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 25 Jul 2019 02:00:29 +0300
+
 eiskaltdcpp (2.2.10+583+g17a6b034-1) experimental; urgency=medium
 
   * New Git snapshot: fixed build in Debian GNU/Hurd.
