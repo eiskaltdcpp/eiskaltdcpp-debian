@@ -1,3 +1,10 @@
+eiskaltdcpp (2.2.10+583+g17a6b034-2ppa1~focal1) focal; urgency=medium
+
+  * Sync package on Launchpad with package in Debian.
+  * Clean changelog.
+
+ -- Boris Pek <tehnick@debian.org>  Fri, 17 Jan 2020 02:07:32 +0300
+
 eiskaltdcpp (2.2.10+583+g17a6b034-2) unstable; urgency=medium
 
   * Move to unstable: no changes required.
