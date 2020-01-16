@@ -1,16 +1,27 @@
-eiskaltdcpp (2.2.10+340+g44d8aea4-1ppa2~disco1) disco; urgency=medium
+eiskaltdcpp (2.2.10+583+g17a6b034-2) unstable; urgency=medium
 
-  * Decrease debhelper version to 9 (was 12~); update debian/compat.
+  * Move to unstable: no changes required.
+  * Update debian/control:
+    - update URLs in Vcs-* fields
+    - bump Standards-Version to 4.4.0 (was 4.3.0): no changes required
+    - update long descriptions of binary packages
 
- -- Boris Pek <tehnick@debian.org>  Thu, 21 Mar 2019 00:56:11 +0300
+ -- Boris Pek <tehnick@debian.org>  Thu, 25 Jul 2019 02:00:29 +0300
 
-eiskaltdcpp (2.2.10+340+g44d8aea4-1ppa1~disco1) disco; urgency=medium
+eiskaltdcpp (2.2.10+583+g17a6b034-1) experimental; urgency=medium
 
-  * Rebuild for Launchpad.
-  * Sync package on Launchpad with package in Debian.
-  * Clean changelog.
+  * New Git snapshot: fixed build in Debian GNU/Hurd.
 
- -- Boris Pek <tehnick@debian.org>  Thu, 21 Mar 2019 00:44:27 +0300
+ -- Boris Pek <tehnick@debian.org>  Tue, 07 May 2019 03:33:27 +0300
+
+eiskaltdcpp (2.2.10+569+gbbc0b7ce-1) experimental; urgency=medium
+
+  * New Git snapshot.
+  * Update short and long descriptions of all packages.
+  * Cosmetic changes in debian/rules.
+  * Update debian/copyright.
+
+ -- Boris Pek <tehnick@debian.org>  Sun, 05 May 2019 00:39:19 +0300
 
 eiskaltdcpp (2.2.10+340+g44d8aea4-1) unstable; urgency=medium
 
