@@ -6,9 +6,8 @@ Build-Depends: cmake,
                debhelper (>= 12~),
                libaspell-dev,
                libattr1-dev,
-               libboost-dev,
-               libboost-system-dev,
                libbz2-dev,
+               libcanberra-gtk-dev,
                libglade2-dev,
                libgtk2.0-dev,
                libidn11-dev,
@@ -29,7 +28,8 @@ Build-Depends: cmake,
 Homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
 Vcs-Git: https://github.com/eiskaltdcpp/eiskaltdcpp-debian.git
 Vcs-Browser: https://github.com/eiskaltdcpp/eiskaltdcpp-debian
-Standards-Version: 4.4.0
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
 
 Package: eiskaltdcpp
 Section: metapackages
@@ -129,7 +129,7 @@ Description: core library for EiskaltDC++ (development files)
 Package: eiskaltdcpp-qt
 Architecture: any
 Depends: eiskaltdcpp-common,
-         eiskaltdcpp-qt-data (= ${source:Version}),
+         eiskaltdcpp-qt-data,
          libqt5sql5-sqlite,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -165,7 +165,7 @@ Description: data files for EiskaltDC++ Qt
 Package: eiskaltdcpp-gtk
 Architecture: any
 Depends: eiskaltdcpp-common,
-         eiskaltdcpp-gtk-data (= ${source:Version}),
+         eiskaltdcpp-gtk-data,
          ${misc:Depends},
          ${shlibs:Depends}
 Provides: eiskaltdcpp-gtk3
