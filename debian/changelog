@@ -1,3 +1,30 @@
+eiskaltdcpp (2.2.10+723+gfa5e73be-1) experimental; urgency=medium
+
+  * New Git snapshot:
+    - removed dependency from Boost
+    - fixed compilation error in eiskaltdcpp-gtk/src/WulforUtil.hh
+      (Closes: #966913)
+  * Remove debian/compat.
+  * Update debian/control:
+    - bump Standards-Version to 4.5.0 (was 4.4.0): no changes required
+    - replace build dependency from debhelper (>= 12~) to
+      debhelper-compat (= 13)
+    - add build dependency from libcanberra-gtk-dev
+    - remove build dependencies from libboost-dev and libboost-system-dev
+    - remove strict versions from dependencies from eiskaltdcpp-{qt|gtk}-data
+      packages in eiskaltdcpp-{qt|gtk} packages
+    - add Rules-Requires-Root: no
+  * Update debian/rules:
+    - add override_dh_install for removing of extra files
+    - configure project with -DUSE_LIBCANBERRA=ON build option
+    - remove DEB_LDFLAGS_MAINT_APPEND variable with -Wl,--as-needed flag
+  * Update debian/copyright.
+  * Update debian/source/lintian-overrides.
+  * Update debian/eiskaltdcpp-scripts.install.
+  * Remove debian/eiskaltdcpp-daemon.lintian-overrides.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 05 Nov 2020 02:18:35 +0300
+
 eiskaltdcpp (2.2.10+583+g17a6b034-2) unstable; urgency=medium
 
   * Move to unstable: no changes required.
