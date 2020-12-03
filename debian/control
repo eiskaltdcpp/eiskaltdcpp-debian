@@ -7,9 +7,8 @@ Build-Depends: cmake,
                libaspell-dev,
                libattr1-dev,
                libbz2-dev,
-               libcanberra-gtk-dev,
-               libglade2-dev,
-               libgtk2.0-dev,
+               libcanberra-gtk3-dev,
+               libgtk-3-dev,
                libidn11-dev,
                liblua5.1-0-dev,
                libminiupnpc-dev,
@@ -28,7 +27,7 @@ Build-Depends: cmake,
 Homepage: https://github.com/eiskaltdcpp/eiskaltdcpp
 Vcs-Git: https://github.com/eiskaltdcpp/eiskaltdcpp-debian.git
 Vcs-Browser: https://github.com/eiskaltdcpp/eiskaltdcpp-debian
-Standards-Version: 4.5.0
+Standards-Version: 4.5.1
 Rules-Requires-Root: no
 
 Package: eiskaltdcpp
