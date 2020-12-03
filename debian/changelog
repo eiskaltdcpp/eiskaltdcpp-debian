@@ -1,9 +1,43 @@
-eiskaltdcpp (2.2.10+583+g17a6b034-2ppa1~focal1) focal; urgency=medium
+eiskaltdcpp (2.4.0-1) unstable; urgency=medium
 
-  * Sync package on Launchpad with package in Debian.
-  * Clean changelog.
+  * Move to unstable: no changes required.
+  * New upstream release.
+  * Update debian/control:
+    - bump Standards-Version to 4.5.1 (was 4.5.0): no changes required
+    - remove build dependencies from libcanberra-gtk-dev, libglade2-dev and
+      libgtk2.0-dev (Closes: #967859 #967327)
+    - add build dependencies from libcanberra-gtk3-dev and libgtk-3-dev
+  * Update debian/rules: switch eiskaltdcpp-gtk to GTK+ 3.x.
+  * Update debian/watch.
 
- -- Boris Pek <tehnick@debian.org>  Fri, 17 Jan 2020 02:07:32 +0300
+ -- Boris Pek <tehnick@debian.org>  Thu, 03 Dec 2020 05:46:03 +0300
+
+eiskaltdcpp (2.2.10+723+gfa5e73be-1) experimental; urgency=medium
+
+  * New Git snapshot:
+    - removed dependency from Boost
+    - fixed compilation error in eiskaltdcpp-gtk/src/WulforUtil.hh
+      (Closes: #966913)
+  * Remove debian/compat.
+  * Update debian/control:
+    - bump Standards-Version to 4.5.0 (was 4.4.0): no changes required
+    - replace build dependency from debhelper (>= 12~) to
+      debhelper-compat (= 13)
+    - add build dependency from libcanberra-gtk-dev
+    - remove build dependencies from libboost-dev and libboost-system-dev
+    - remove strict versions from dependencies from eiskaltdcpp-{qt|gtk}-data
+      packages in eiskaltdcpp-{qt|gtk} packages
+    - add Rules-Requires-Root: no
+  * Update debian/rules:
+    - add override_dh_install for removing of extra files
+    - configure project with -DUSE_LIBCANBERRA=ON build option
+    - remove DEB_LDFLAGS_MAINT_APPEND variable with -Wl,--as-needed flag
+  * Update debian/copyright.
+  * Update debian/source/lintian-overrides.
+  * Update debian/eiskaltdcpp-scripts.install.
+  * Remove debian/eiskaltdcpp-daemon.lintian-overrides.
+
+ -- Boris Pek <tehnick@debian.org>  Thu, 05 Nov 2020 02:18:35 +0300
 
 eiskaltdcpp (2.2.10+583+g17a6b034-2) unstable; urgency=medium
 
