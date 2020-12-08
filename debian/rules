@@ -2,13 +2,12 @@
 
 include /usr/share/dpkg/pkg-info.mk
 
-export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 CMAKEOPTS = -DUSE_ASPELL=ON \
             -DUSE_CLI_JSONRPC=ON \
-            -DUSE_GTK=ON \
-            -DUSE_GTK3=OFF \
+            -DUSE_GTK=OFF \
+            -DUSE_GTK3=ON \
             -DUSE_IDNA=ON \
             -DUSE_JS=ON \
             -DUSE_LIBGNOME2=OFF \
@@ -18,6 +17,7 @@ CMAKEOPTS = -DUSE_ASPELL=ON \
             -DUSE_QT=OFF \
             -DUSE_QT_QML=OFF \
             -DUSE_QT_SQLITE=ON \
+            -DUSE_LIBCANBERRA=ON \
             -DWITH_DEV_FILES=ON \
             -DWITH_DHT=ON \
             -DWITH_LUASCRIPTS=ON \
@@ -32,9 +32,15 @@ CMAKEOPTS = -DUSE_ASPELL=ON \
             -DCHECK_GTK_DEPRECATED=OFF \
             -DREPLACE_VERSION="$(DEB_VERSION_UPSTREAM)"
 
+EXCLUDE_FILES = usr/share/eiskaltdcpp/emoticons/*/READ_ME.txt \
+                usr/share/eiskaltdcpp/sounds/READ_ME.txt
 
 %:
 	dh $@
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(CMAKEOPTS)
+
+override_dh_install:
+	cd $(CURDIR)/debian/tmp && rm -f $(EXCLUDE_FILES)
+	dh_install
