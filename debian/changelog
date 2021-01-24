@@ -1,3 +1,9 @@
+eiskaltdcpp (2.4.1-0ppa1~hirsute1) hirsute; urgency=medium
+
+  * New upstream release.
+
+ -- Boris Pek <tehnick@debian.org>  Sun, 24 Jan 2021 15:58:08 +0300
+
 eiskaltdcpp (2.4.0-1ppa1~hirsute1) hirsute; urgency=medium
 
   * Sync package on Launchpad with package in Debian.
