@@ -1,9 +1,9 @@
-eiskaltdcpp (2.4.0-1~bpo10+1) buster-backports; urgency=medium
+eiskaltdcpp (2.4.1-1) unstable; urgency=medium
 
-  * Rebuild for buster-backports.
-  * Decrease debhelper-compat version to 12 (was 13).
+  * New upstream release.
+  * Update years in debian/copyright.
 
- -- Boris Pek <tehnick@debian.org>  Tue, 08 Dec 2020 20:18:39 +0300
+ -- Boris Pek <tehnick@debian.org>  Sun, 24 Jan 2021 16:05:44 +0300
 
 eiskaltdcpp (2.4.0-1) unstable; urgency=medium
 
