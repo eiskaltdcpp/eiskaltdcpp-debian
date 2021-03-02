@@ -1,3 +1,9 @@
+eiskaltdcpp (2.4.2-0ppa1~hirsute1) hirsute; urgency=medium
+
+  * New upstream release.
+
+ -- Boris Pek <tehnick@debian.org>  Wed, 03 Mar 2021 00:25:32 +0300
+
 eiskaltdcpp (2.4.1-0ppa1~hirsute1) hirsute; urgency=medium
 
   * New upstream release.
