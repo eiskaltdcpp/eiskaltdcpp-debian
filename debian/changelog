@@ -1,3 +1,14 @@
+eiskaltdcpp (2.4.2-1) unstable; urgency=medium
+
+  * New upstream release. Main change:
+    Fix search on ADC hubs. (It was accidentally broken in 2.4.1 release.)
+  * Update debian/control:
+    - small update of short description for eiskaltdcpp package
+    - replace build dependency from liblua5.1-0-dev to liblua5.2-dev
+      (recommended by upstream)
+
+ -- Boris Pek <tehnick@debian.org>  Wed, 03 Mar 2021 01:02:49 +0300
+
 eiskaltdcpp (2.4.1-1) unstable; urgency=medium
 
   * New upstream release.
