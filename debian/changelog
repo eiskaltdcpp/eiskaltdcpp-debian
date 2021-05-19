@@ -1,10 +1,13 @@
-eiskaltdcpp (2.4.1-1~bpo10+1) buster-backports; urgency=medium
+eiskaltdcpp (2.4.2-1) unstable; urgency=medium
 
-  * Rebuild for buster-backports.
-  * Decrease debhelper-compat version to 12 (was 13).
-  * Add -Wl,--as-needed flag to LDFLAGS in debian/rules.
+  * New upstream release. Main change:
+    Fix search on ADC hubs. (It was accidentally broken in 2.4.1 release.)
+  * Update debian/control:
+    - small update of short description for eiskaltdcpp package
+    - replace build dependency from liblua5.1-0-dev to liblua5.2-dev
+      (recommended by upstream)
 
- -- Boris Pek <tehnick@debian.org>  Fri, 29 Jan 2021 01:59:16 +0300
+ -- Boris Pek <tehnick@debian.org>  Wed, 03 Mar 2021 01:02:49 +0300
 
 eiskaltdcpp (2.4.1-1) unstable; urgency=medium
 
